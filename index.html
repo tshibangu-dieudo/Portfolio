@@ -3,119 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio - Dieudo Tshibangu</title>
-
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- Font Awesome -->
+<title>Dieudo Tshibangu — Développeur Freelance</title>
+<meta name="description" content="Portfolio de Dieudo Tshibangu, développeur web freelance basé au Burundi. PHP, HTML, CSS, Java, Python, SQL.">
+<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-<style>
-.section-light { background-color: #f8f9fa; }
-.section-dark { background-color: #343a40; color: white; }
-.rounded-circle-perfect { width: 180px; height: 180px; object-fit: cover; border: 3px solid #007bff; border-radius: 50%; }
-.btn-custom { margin-right: 10px; margin-top: 10px; }
-.card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: all 0.3s ease; }
-</style>
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">Portfolio</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
-        <li class="nav-item"><a class="nav-link" href="skills.html">Compétences</a></li>
-        <li class="nav-item"><a class="nav-link" href="projects.html">Projets</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
+<nav class="navbar">
+  <a class="nav-brand" href="index.html">DT.</a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active" data-i18n="nav_home">Accueil</a></li>
+    <li><a href="about.html" data-i18n="nav_about">À propos</a></li>
+    <li><a href="skills.html" data-i18n="nav_skills">Compétences</a></li>
+    <li><a href="projects.html" data-i18n="nav_projects">Projets</a></li>
+    <li><a href="projects.html#services" data-i18n="nav_services">Services</a></li>
+    <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-toggle" onclick="toggleLang()">🌐 EN</button>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
     </div>
   </div>
 </nav>
 
-<!-- SECTION PRÉSENTATION -->
-<section class="section-light text-center py-5">
-  <img src="img/DIEUDO.jpg" alt="Dieudo Tshibangu" class="rounded-circle-perfect mb-3">
-  <h1 class="display-4">Dieudo Tshibangu</h1>
-  <p class="lead">Étudiant en informatique de gestion passionné par le développement web et la création d'applications.</p>
-  <a href="projects.html" class="btn btn-primary btn-lg btn-custom">Voir mes projets</a>
-  <a href="cv/Dieudo_Tshibangu_CV.pdf" class="btn btn-success btn-lg btn-custom">Télécharger CV</a>
-  <a href="https://github.com/tshibangu-dieudo" class="btn btn-dark btn-lg btn-custom">GitHub</a>
-  <a href="https://www.linkedin.com/in/dieudo-tshibangu-b3ab0336a" class="btn btn-info btn-lg btn-custom">LinkedIn</a>
-</section>
-
-<!-- SECTION COMPÉTENCES -->
-<section class="section-dark py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Mes compétences</h2>
-    <div class="row text-center">
-      <div class="col-md-2 mb-3">
-        <div class="card h-100"><div class="card-body"><i class="fab fa-html5 fa-3x text-danger mb-2"></i><h5>HTML</h5></div></div>
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <img src="img/DIEUDO.jpg" alt="Dieudo Tshibangu" class="hero-avatar">
+    <div class="hero-badge" data-i18n="hero_badge">DISPONIBLE EN FREELANCE</div>
+    <h1>
+      <span data-i18n="hero_title1">Dieudo</span>
+      <span data-i18n="hero_title2"> Tshibangu</span>
+    </h1>
+    <p class="hero-subtitle" data-i18n="hero_sub">
+      Développeur web full-stack basé au Burundi. Je crée des sites web et applications sur mesure.
+    </p>
+    <div class="hero-btns">
+      <a href="projects.html" class="btn btn-primary">
+        <i class="fas fa-rocket"></i>
+        <span data-i18n="hero_btn1">Voir mes projets</span>
+      </a>
+      <a href="cv/Dieudo_Tshibangu_CV.pdf" class="btn btn-outline" download>
+        <i class="fas fa-download"></i>
+        <span data-i18n="hero_btn2">Télécharger CV</span>
+      </a>
+      <a href="contact.html" class="btn btn-ghost">
+        <i class="fas fa-envelope"></i>
+        <span data-i18n="hero_btn3">Me contacter</span>
+      </a>
+    </div>
+    <div class="hero-socials">
+      <a href="https://github.com/tshibangu-dieudo" target="_blank" class="social-icon" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/dieudo-tshibangu-b3ab0336a" target="_blank" class="social-icon" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="mailto:tshibangudieudo@gmail.com" class="social-icon" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+    <div class="stats-row" style="margin-top:3rem;">
+      <div class="stat">
+        <div class="stat-num">5+</div>
+        <div class="stat-label" data-i18n="stat1_label">Projets réalisés</div>
       </div>
-      <div class="col-md-2 mb-3">
-        <div class="card h-100"><div class="card-body"><i class="fab fa-css3-alt fa-3x text-primary mb-2"></i><h5>CSS</h5></div></div>
+      <div class="stat">
+        <div class="stat-num">6</div>
+        <div class="stat-label" data-i18n="stat2_label">Technologies</div>
       </div>
-      <div class="col-md-2 mb-3">
-        <div class="card h-100"><div class="card-body"><i class="fab fa-php fa-3x text-purple mb-2"></i><h5>PHP</h5></div></div>
-      </div>
-      <div class="col-md-2 mb-3">
-        <div class="card h-100"><div class="card-body"><i class="fab fa-java fa-3x text-warning mb-2"></i><h5>Java</h5></div></div>
-      </div>
-      <div class="col-md-2 mb-3">
-        <div class="card h-100"><div class="card-body"><i class="fab fa-python fa-3x text-info mb-2"></i><h5>Python</h5></div></div>
+      <div class="stat">
+        <div class="stat-num" data-i18n="stat3_val">Freelance</div>
+        <div class="stat-label" data-i18n="stat3_label">Disponibilité</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION PROJETS -->
-<section class="section-light py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Mes projets</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Application de gestion de stock</h5>
-            <p class="card-text">Application Java pour gérer les produits, entrées et sorties de stock.</p>
-            <a href="https://github.com/tshibangu-dieudo/gestion-de-stock-de-d-approvisionnement" class="btn btn-primary btn-sm">Voir GitHub</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Application de gestion universitaire</h5>
-            <p class="card-text">Application Java pour gérer étudiants et cours.</p>
-            <a href="https://github.com/tshibangu-dieudo/gestion-universite" class="btn btn-primary btn-sm">Voir GitHub</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Portfolio développeur</h5>
-            <p class="card-text">Mon site web personnel pour présenter mes projets et compétences.</p>
-            <a href="https://github.com/tshibangu-dieudo" class="btn btn-primary btn-sm">Voir GitHub</a>
-          </div>
-        </div>
-      </div>
-    </div>
+<!-- QUICK SKILLS STRIP -->
+<div style="background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.5rem 2rem;">
+  <div class="container" style="display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;align-items:center;">
+    <span style="color:var(--text-muted);font-size:0.82rem;font-weight:600;letter-spacing:1px;">STACK :</span>
+    <span style="color:var(--text);font-size:0.9rem;display:flex;align-items:center;gap:0.4rem;"><i class="fab fa-html5" style="color:#e34f26"></i> HTML</span>
+    <span style="color:var(--text);font-size:0.9rem;display:flex;align-items:center;gap:0.4rem;"><i class="fab fa-css3-alt" style="color:#264de4"></i> CSS</span>
+    <span style="color:var(--text);font-size:0.9rem;display:flex;align-items:center;gap:0.4rem;"><i class="fab fa-php" style="color:#8892be"></i> PHP</span>
+    <span style="color:var(--text);font-size:0.9rem;display:flex;align-items:center;gap:0.4rem;"><i class="fab fa-java" style="color:#f89820"></i> Java</span>
+    <span style="color:var(--text);font-size:0.9rem;display:flex;align-items:center;gap:0.4rem;"><i class="fab fa-python" style="color:#3776ab"></i> Python</span>
+    <span style="color:var(--text);font-size:0.9rem;display:flex;align-items:center;gap:0.4rem;"><i class="fas fa-database" style="color:#43e97b"></i> SQL</span>
   </div>
-</section>
+</div>
 
 <!-- FOOTER -->
-<footer class="bg-dark text-white text-center p-3 mt-5">
-  <p>© 2026 Dieudo Tshibangu - Portfolio</p>
+<footer>
+  <p data-i18n="footer_text">© 2026 Dieudo Tshibangu · Développeur Freelance</p>
+  <p style="margin-top:0.3rem;" data-i18n="footer_made">Fait avec ❤️ au Burundi</p>
 </footer>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

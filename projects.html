@@ -3,76 +3,365 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projets - Dieudo Tshibangu</title>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<title>Projets — Dieudo Tshibangu</title>
+<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-<style>
-.section-light { background-color: #f8f9fa; }
-.card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: all 0.3s ease; }
-.btn-custom { margin-top: 10px; }
-</style>
 </head>
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">Portfolio</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
-        <li class="nav-item"><a class="nav-link" href="skills.html">Compétences</a></li>
-        <li class="nav-item"><a class="nav-link active" href="projects.html">Projets</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
+<nav class="navbar">
+  <a class="nav-brand" href="index.html">DT.</a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+    <li><a href="about.html" data-i18n="nav_about">À propos</a></li>
+    <li><a href="skills.html" data-i18n="nav_skills">Compétences</a></li>
+    <li><a href="projects.html" class="active" data-i18n="nav_projects">Projets</a></li>
+    <li><a href="projects.html#services" data-i18n="nav_services">Services</a></li>
+    <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-toggle" onclick="toggleLang()">🌐 EN</button>
+    <div class="hamburger"><span></span><span></span><span></span></div>
   </div>
 </nav>
 
-<section class="section-light py-5">
+<!-- PROJECTS -->
+<section style="padding-top:7rem;">
   <div class="container">
-    <h2 class="text-center mb-4">Mes projets</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Application de gestion de stock</h5>
-            <p class="card-text">Application Java pour gérer les produits, entrées et sorties de stock.</p>
-            <a href="https://github.com/tshibangu-dieudo/gestion-de-stock-de-d-approvisionnement" class="btn btn-primary btn-sm">Voir GitHub</a>
+    <div class="section-header fade-in">
+      <div class="section-tag" data-i18n="proj_tag">MES RÉALISATIONS</div>
+      <h2 class="section-title">
+        <span data-i18n="proj_title1">Mes</span><span data-i18n="proj_title2"> Projets</span>
+      </h2>
+      <p class="section-desc" data-i18n="proj_desc">Des projets concrets qui démontrent mes compétences en développement.</p>
+    </div>
+    <div class="grid-2">
+
+      <!-- ===== TECHSHOP ===== -->
+      <div class="card project-card fade-in">
+        <!-- Slider 3 images -->
+        <div class="proj-slider">
+          <div class="proj-slider-track">
+            <div class="proj-slide">
+              <img src="img/shop1.jpeg" alt="TechShop screenshot 1" loading="lazy">
+              <div class="proj-slide-overlay"></div>
+            </div>
+            <div class="proj-slide">
+              <img src="img/shop2.jpeg" alt="TechShop screenshot 2" loading="lazy">
+              <div class="proj-slide-overlay"></div>
+            </div>
+            <div class="proj-slide">
+              <img src="img/shop3.jpeg" alt="TechShop screenshot 3" loading="lazy">
+              <div class="proj-slide-overlay"></div>
+            </div>
+          </div>
+          <button class="slider-btn prev" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
+          <button class="slider-btn next" aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
+          <div class="slider-dots">
+            <button class="slider-dot active"></button>
+            <button class="slider-dot"></button>
+            <button class="slider-dot"></button>
+          </div>
+          <div class="slider-counter">1 / 3</div>
+        </div>
+        <div class="project-header">
+          <div class="project-icon" style="background:rgba(108,99,255,0.15);">
+            <i class="fas fa-shopping-cart" style="color:var(--primary)"></i>
+          </div>
+          <div>
+            <div class="project-title">TechShop</div>
+            <div class="project-type" data-i18n="proj1_type">E-Commerce · PHP/CSS</div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Application de gestion universitaire</h5>
-            <p class="card-text">Application Java pour gérer étudiants et cours.</p>
-            <a href="https://github.com/tshibangu-dieudo/gestion-universite" class="btn btn-primary btn-sm">Voir GitHub</a>
-          </div>
+        <p class="project-desc" data-i18n="proj1_desc">Boutique en ligne complète avec gestion des produits, commandes et panel d'administration.</p>
+        <ul class="project-features">
+          <li data-i18n="proj1_f1">Connexion / Inscription sécurisée</li>
+          <li data-i18n="proj1_f2">Panier et gestion des commandes</li>
+          <li data-i18n="proj1_f3">Panel admin : produits, catégories, utilisateurs</li>
+          <li data-i18n="proj1_f4">Base de données SQL complète</li>
+        </ul>
+        <div class="tech-tags">
+          <span class="tech-tag">PHP</span><span class="tech-tag">CSS</span>
+          <span class="tech-tag">MySQL</span><span class="tech-tag">HTML</span>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com/tshibangu-dieudo/Techshop" target="_blank" class="btn btn-primary btn-sm">
+            <i class="fab fa-github"></i><span data-i18n="btn_github">GitHub</span>
+          </a>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Portfolio développeur</h5>
-            <p class="card-text">Mon site web personnel pour présenter mes projets et compétences.</p>
-            <a href="https://github.com/tshibangu-dieudo" class="btn btn-primary btn-sm">Voir GitHub</a>
+
+      <!-- ===== LOMAMI HORIZON ===== -->
+      <div class="card project-card fade-in">
+        <div class="proj-slider">
+          <div class="proj-slider-track">
+            <div class="proj-slide">
+              <img src="img/lo1.jpeg" alt="Lomami Horizon screenshot 1" loading="lazy">
+              <div class="proj-slide-overlay"></div>
+            </div>
+            <div class="proj-slide">
+              <img src="img/lo2.jpeg" alt="Lomami Horizon screenshot 2" loading="lazy">
+              <div class="proj-slide-overlay"></div>
+            </div>
+            <div class="proj-slide">
+              <img src="img/lo3.jpeg" alt="Lomami Horizon screenshot 3" loading="lazy">
+              <div class="proj-slide-overlay"></div>
+            </div>
+          </div>
+          <button class="slider-btn prev" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
+          <button class="slider-btn next" aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
+          <div class="slider-dots">
+            <button class="slider-dot active"></button>
+            <button class="slider-dot"></button>
+            <button class="slider-dot"></button>
+          </div>
+          <div class="slider-counter">1 / 3</div>
+        </div>
+        <div class="project-header">
+          <div class="project-icon" style="background:rgba(67,233,123,0.15);">
+            <i class="fas fa-map-marked-alt" style="color:var(--accent)"></i>
+          </div>
+          <div>
+            <div class="project-title">Lomami Horizon</div>
+            <div class="project-type" data-i18n="proj2_type">Tourisme · PHP/CSS</div>
           </div>
         </div>
+        <p class="project-desc" data-i18n="proj2_desc">Site de tourisme pour la région Lomami avec galerie, carte interactive et système de réservation.</p>
+        <ul class="project-features">
+          <li data-i18n="proj2_f1">Galerie photos et carte interactive</li>
+          <li data-i18n="proj2_f2">Itinéraires, favoris, commentaires</li>
+          <li data-i18n="proj2_f3">Panel admin et modération</li>
+          <li data-i18n="proj2_f4">Mode sombre et multilingue</li>
+        </ul>
+        <div class="tech-tags">
+          <span class="tech-tag">PHP</span><span class="tech-tag">CSS</span>
+          <span class="tech-tag">MySQL</span><span class="tech-tag">JavaScript</span>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com/tshibangu-dieudo/Lomami_Horizon" target="_blank" class="btn btn-primary btn-sm">
+            <i class="fab fa-github"></i><span data-i18n="btn_github">GitHub</span>
+          </a>
+          <a href="https://lomami.infinityfreeapp.com/" target="_blank" class="btn btn-outline btn-sm">
+            <i class="fas fa-external-link-alt"></i><span data-i18n="btn_demo">Démo</span>
+          </a>
+        </div>
       </div>
+
+      <!-- ===== GESTION DE STOCK ===== -->
+      <div class="card project-card fade-in">
+        <div class="proj-slider">
+          <div class="proj-slider-track">
+            <div class="proj-slide">
+              <img src="img/python1.jpeg" alt="Gestion de stock screenshot 1" loading="lazy">
+              <div class="proj-slide-overlay"></div>
+            </div>
+            <div class="proj-slide">
+              <img src="img/python2.jpeg" alt="Gestion de stock screenshot 2" loading="lazy">
+              <div class="proj-slide-overlay"></div>
+            </div>
+          </div>
+          <button class="slider-btn prev" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
+          <button class="slider-btn next" aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
+          <div class="slider-dots">
+            <button class="slider-dot active"></button>
+            <button class="slider-dot"></button>
+          </div>
+          <div class="slider-counter">1 / 2</div>
+        </div>
+        <div class="project-header">
+          <div class="project-icon" style="background:rgba(255,101,132,0.15);">
+            <i class="fas fa-boxes" style="color:var(--secondary)"></i>
+          </div>
+          <div>
+            <div class="project-title">Gestion de Stock</div>
+            <div class="project-type" data-i18n="proj3_type">Application · Java</div>
+          </div>
+        </div>
+        <p class="project-desc" data-i18n="proj3_desc">Application desktop Java pour gérer les produits, entrées et sorties de stock.</p>
+        <ul class="project-features">
+          <li data-i18n="proj3_f1">Gestion des produits et catégories</li>
+          <li data-i18n="proj3_f2">Suivi des entrées et sorties</li>
+          <li data-i18n="proj3_f3">Rapports et statistiques</li>
+        </ul>
+        <div class="tech-tags">
+          <span class="tech-tag">Java</span><span class="tech-tag">Swing</span><span class="tech-tag">MySQL</span>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com/tshibangu-dieudo/gestion-de-stock-de-d-approvisionnement" target="_blank" class="btn btn-primary btn-sm">
+            <i class="fab fa-github"></i><span data-i18n="btn_github">GitHub</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ===== GESTION UNIVERSITAIRE ===== -->
+      <div class="card project-card fade-in">
+        <div class="proj-slider">
+          <div class="proj-slider-track">
+            <div class="proj-slide">
+              <img src="img/java1.jpeg" alt="Gestion universitaire screenshot 1" loading="lazy">
+              <div class="proj-slide-overlay"></div>
+            </div>
+            <div class="proj-slide">
+              <img src="img/java2.jpeg" alt="Gestion universitaire screenshot 2" loading="lazy">
+              <div class="proj-slide-overlay"></div>
+            </div>
+          </div>
+          <button class="slider-btn prev" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
+          <button class="slider-btn next" aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
+          <div class="slider-dots">
+            <button class="slider-dot active"></button>
+            <button class="slider-dot"></button>
+          </div>
+          <div class="slider-counter">1 / 2</div>
+        </div>
+        <div class="project-header">
+          <div class="project-icon" style="background:rgba(56,249,215,0.12);">
+            <i class="fas fa-university" style="color:#38f9d7"></i>
+          </div>
+          <div>
+            <div class="project-title">Gestion Universitaire</div>
+            <div class="project-type" data-i18n="proj4_type">Application · Java</div>
+          </div>
+        </div>
+        <p class="project-desc" data-i18n="proj4_desc">Application Java pour la gestion complète d'un établissement universitaire.</p>
+        <ul class="project-features">
+          <li data-i18n="proj4_f1">Gestion des étudiants et cours</li>
+          <li data-i18n="proj4_f2">Inscriptions et notes</li>
+          <li data-i18n="proj4_f3">Tableau de bord administratif</li>
+        </ul>
+        <div class="tech-tags">
+          <span class="tech-tag">Java</span><span class="tech-tag">Swing</span><span class="tech-tag">MySQL</span>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com/tshibangu-dieudo/gestion-universite" target="_blank" class="btn btn-primary btn-sm">
+            <i class="fab fa-github"></i><span data-i18n="btn_github">GitHub</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ===== PORTFOLIO ===== -->
+      <div class="card project-card fade-in">
+        <!-- Placeholder (pas de screenshot) -->
+        <div class="proj-slider" style="aspect-ratio:16/9;">
+          <div class="proj-slider-track">
+            <div class="proj-slide">
+              <div class="proj-slide-placeholder">
+                <i class="fas fa-code"></i>
+                <span>Portfolio Personnel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-header">
+          <div class="project-icon" style="background:rgba(108,99,255,0.15);">
+            <i class="fas fa-code" style="color:var(--primary)"></i>
+          </div>
+          <div>
+            <div class="project-title">Portfolio Personnel</div>
+            <div class="project-type" data-i18n="proj5_type">Portfolio · HTML/CSS/JS</div>
+          </div>
+        </div>
+        <p class="project-desc" data-i18n="proj5_desc">Mon portfolio personnel pour présenter mes projets et compétences aux clients.</p>
+        <ul class="project-features">
+          <li data-i18n="proj5_f1">Design moderne et responsive</li>
+          <li data-i18n="proj5_f2">Bilingue FR/EN</li>
+          <li data-i18n="proj5_f3">Animations et interactions</li>
+        </ul>
+        <div class="tech-tags">
+          <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com/tshibangu-dieudo/Portfolio" target="_blank" class="btn btn-primary btn-sm">
+            <i class="fab fa-github"></i><span data-i18n="btn_github">GitHub</span>
+          </a>
+          <a href="https://tshibangu-dieudo.github.io/Portfolio/" target="_blank" class="btn btn-outline btn-sm">
+            <i class="fas fa-external-link-alt"></i><span data-i18n="btn_demo">Démo</span>
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<footer class="bg-dark text-white text-center p-3 mt-5">
-  <p>© 2026 Dieudo Tshibangu - Portfolio</p>
-</footer>
+<div class="divider"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-tag" data-i18n="serv_tag">CE QUE JE PROPOSE</div>
+      <h2 class="section-title">
+        <span data-i18n="serv_title1">Mes</span><span data-i18n="serv_title2"> Services</span>
+      </h2>
+      <p class="section-desc" data-i18n="serv_desc">Des solutions web professionnelles adaptées à vos besoins.</p>
+    </div>
+    <div class="grid-4">
+      <div class="card service-card fade-in">
+        <div class="service-icon" style="background:rgba(108,99,255,0.15);">
+          <i class="fas fa-globe" style="color:var(--primary)"></i>
+        </div>
+        <h3 data-i18n="serv1_title">Création de site web</h3>
+        <p data-i18n="serv1_desc">Sites vitrines, portfolios et landing pages modernes, responsives et optimisés.</p>
+        <ul class="service-list">
+          <li data-i18n="serv1_f1">Design sur mesure</li>
+          <li data-i18n="serv1_f2">Responsive mobile</li>
+          <li data-i18n="serv1_f3">SEO de base</li>
+          <li data-i18n="serv1_f4">Livraison rapide</li>
+        </ul>
+      </div>
+      <div class="card service-card fade-in">
+        <div class="service-icon" style="background:rgba(255,101,132,0.15);">
+          <i class="fas fa-shopping-bag" style="color:var(--secondary)"></i>
+        </div>
+        <h3 data-i18n="serv2_title">Développement e-commerce</h3>
+        <p data-i18n="serv2_desc">Boutiques en ligne complètes avec gestion des produits, paiements et commandes.</p>
+        <ul class="service-list">
+          <li data-i18n="serv2_f1">Catalogue produits</li>
+          <li data-i18n="serv2_f2">Panier &amp; commandes</li>
+          <li data-i18n="serv2_f3">Panel admin</li>
+          <li data-i18n="serv2_f4">Base de données SQL</li>
+        </ul>
+      </div>
+      <div class="card service-card fade-in">
+        <div class="service-icon" style="background:rgba(67,233,123,0.15);">
+          <i class="fas fa-cogs" style="color:var(--accent)"></i>
+        </div>
+        <h3 data-i18n="serv3_title">Application de gestion</h3>
+        <p data-i18n="serv3_desc">Applications desktop ou web pour gérer vos données métier efficacement.</p>
+        <ul class="service-list">
+          <li data-i18n="serv3_f1">Gestion de stock</li>
+          <li data-i18n="serv3_f2">Gestion RH</li>
+          <li data-i18n="serv3_f3">Tableaux de bord</li>
+          <li data-i18n="serv3_f4">Rapports PDF</li>
+        </ul>
+      </div>
+      <div class="card service-card fade-in">
+        <div class="service-icon" style="background:rgba(56,249,215,0.12);">
+          <i class="fas fa-database" style="color:#38f9d7"></i>
+        </div>
+        <h3 data-i18n="serv4_title">Base de données</h3>
+        <p data-i18n="serv4_desc">Conception, optimisation et administration de bases de données relationnelles.</p>
+        <ul class="service-list">
+          <li data-i18n="serv4_f1">Modélisation MCD/MLD</li>
+          <li data-i18n="serv4_f2">Requêtes optimisées</li>
+          <li data-i18n="serv4_f3">MySQL / SQL Server</li>
+          <li data-i18n="serv4_f4">Migrations de données</li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="contact.html" class="btn btn-primary">
+        <i class="fas fa-paper-plane"></i>
+        <span data-i18n="hero_btn3">Me contacter</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p data-i18n="footer_text">© 2026 Dieudo Tshibangu · Développeur Freelance</p>
+  <p style="margin-top:0.3rem;" data-i18n="footer_made">Fait avec ❤️ au Burundi</p>
+</footer>
+<script src="main.js"></script>
 </body>
 </html>

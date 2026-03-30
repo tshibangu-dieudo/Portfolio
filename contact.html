@@ -3,75 +3,119 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact - Dieudo Tshibangu</title>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<title>Contact — Dieudo Tshibangu</title>
+<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-<style>
-.section-light { background-color: #f8f9fa; }
-.btn-custom { margin-top: 10px; }
-</style>
 </head>
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">Portfolio</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
-        <li class="nav-item"><a class="nav-link" href="skills.html">Compétences</a></li>
-        <li class="nav-item"><a class="nav-link" href="projects.html">Projets</a></li>
-        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
+<nav class="navbar">
+  <a class="nav-brand" href="index.html">DT.</a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+    <li><a href="about.html" data-i18n="nav_about">À propos</a></li>
+    <li><a href="skills.html" data-i18n="nav_skills">Compétences</a></li>
+    <li><a href="projects.html" data-i18n="nav_projects">Projets</a></li>
+    <li><a href="projects.html#services" data-i18n="nav_services">Services</a></li>
+    <li><a href="contact.html" class="active" data-i18n="nav_contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-toggle" onclick="toggleLang()">🌐 EN</button>
+    <div class="hamburger"><span></span><span></span><span></span></div>
   </div>
 </nav>
 
-<section class="section-light py-5">
+<section style="padding-top:7rem;">
   <div class="container">
-    <h2 class="text-center mb-4">Contactez-moi</h2>
-    <p class="text-center mb-5">Envoyez-moi un message et je vous répondrai dès que possible.</p>
+    <div class="section-header fade-in">
+      <div class="section-tag" data-i18n="contact_tag">TRAVAILLONS ENSEMBLE</div>
+      <h2 class="section-title">
+        <span data-i18n="contact_title1">Me</span>
+        <span data-i18n="contact_title2"> Contacter</span>
+      </h2>
+      <p class="section-desc" data-i18n="contact_desc">Disponible pour des missions freelance. Réponse sous 24h.</p>
+    </div>
+    <div class="contact-grid">
+      <!-- Info -->
+      <div class="fade-in">
+        <h3 data-i18n="contact_title1">Me Contacter</h3>
+        <p data-i18n="contact_desc">Disponible pour des missions freelance. Réponse sous 24h.</p>
 
-    <div class="row justify-content-center">
-      <div class="col-md-8">
+        <a href="mailto:tshibangudieudo@gmail.com" class="contact-item">
+          <div class="contact-item-icon" style="background:rgba(108,99,255,0.15);">
+            <i class="fas fa-envelope" style="color:var(--primary)"></i>
+          </div>
+          <div class="contact-item-text">
+            <strong data-i18n="contact_email_label">Email</strong>
+            <span>tshibangudieudo@gmail.com</span>
+          </div>
+        </a>
+
+        <div class="contact-item" style="cursor:default;">
+          <div class="contact-item-icon" style="background:rgba(67,233,123,0.15);">
+            <i class="fas fa-map-marker-alt" style="color:var(--accent)"></i>
+          </div>
+          <div class="contact-item-text">
+            <strong data-i18n="contact_loc_label">Localisation</strong>
+            <span>Bujumbura, Burundi</span>
+          </div>
+        </div>
+
+        <div class="contact-item" style="cursor:default;">
+          <div class="contact-item-icon" style="background:rgba(255,101,132,0.15);">
+            <i class="fas fa-briefcase" style="color:var(--secondary)"></i>
+          </div>
+          <div class="contact-item-text">
+            <strong data-i18n="contact_avail_label">Disponibilité</strong>
+            <span data-i18n="contact_avail_val">Freelance · Fiverr · Upwork</span>
+          </div>
+        </div>
+
+        <div class="contact-socials">
+          <a href="https://github.com/tshibangu-dieudo" target="_blank" class="contact-social" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/dieudo-tshibangu-b3ab0336a" target="_blank" class="contact-social" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:tshibangudieudo@gmail.com" class="contact-social" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="card fade-in">
         <form action="https://formspree.io/f/xqeybdjq" method="POST">
-          <div class="mb-3">
-            <label for="name" class="form-label">Nom</label>
-            <input type="text" class="form-control" id="name" name="name" required>
+          <div class="form-group">
+            <label for="name" data-i18n="form_name">Votre nom</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" data-i18n-placeholder="form_name" required>
           </div>
-
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" name="email" required>
+          <div class="form-group">
+            <label for="email" data-i18n="form_email">Votre email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Votre email" data-i18n-placeholder="form_email" required>
           </div>
-
-          <div class="mb-3">
-            <label for="subject" class="form-label">Sujet</label>
-            <input type="text" class="form-control" id="subject" name="subject" required>
+          <div class="form-group">
+            <label for="subject" data-i18n="form_subject">Sujet</label>
+            <input type="text" class="form-control" id="subject" name="subject" placeholder="Sujet" data-i18n-placeholder="form_subject" required>
           </div>
-
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+          <div class="form-group">
+            <label for="message" data-i18n="form_message">Votre message...</label>
+            <textarea class="form-control" id="message" name="message" placeholder="Votre message..." data-i18n-placeholder="form_message" required></textarea>
           </div>
-
-          <button type="submit" class="btn btn-primary btn-lg btn-custom">Envoyer</button>
+          <button type="submit" class="btn btn-primary" style="width:100%;">
+            <i class="fas fa-paper-plane"></i>
+            <span data-i18n="form_send">Envoyer le message</span>
+          </button>
         </form>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="bg-dark text-white text-center p-3 mt-5">
-  <p>© 2026 Dieudo Tshibangu - Portfolio</p>
+<footer>
+  <p data-i18n="footer_text">© 2026 Dieudo Tshibangu · Développeur Freelance</p>
+  <p style="margin-top:0.3rem;" data-i18n="footer_made">Fait avec ❤️ au Burundi</p>
 </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
