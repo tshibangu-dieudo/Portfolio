@@ -12,7 +12,7 @@ const translations = {
     // About
     about_tag: "QUI SUIS-JE", about_title1: "À propos", about_title2: "de moi",
     about_p1: "Je suis Dieudo Tshibangu, étudiant en informatique de gestion à l'université, passionné par le développement web et la création d'applications.",
-    about_p2: "Mon objectif est de travailler en freelance sur Fiverr et Upwork, en proposant des solutions web de qualité professionnelle à des clients du monde entier.",
+    about_p2: "Mon objectif est de travailler en freelance sur Fiverr et Upwork, en proposant des solutions web de qualité professionnelle — sites vitrines, e-commerce et applications Django — à des clients du monde entier.",
     about_age: "21 ans", about_loc: "Bujumbura, Burundi", about_edu: "Informatique de gestion",
     about_avail: "Disponible en freelance",
     about_btn1: "Télécharger CV", about_btn2: "GitHub", about_btn3: "LinkedIn",
@@ -49,6 +49,12 @@ const translations = {
     proj5_f1: "Design moderne et responsive",
     proj5_f2: "Bilingue FR/EN",
     proj5_f3: "Animations et interactions",
+    proj6_type: "Site Vitrine · Django/Python",
+    proj6_desc: "Site vitrine pour un bar à jus avec menu des boissons, gestion des comptes et interface d'administration.",
+    proj6_f1: "Menu des jus et boissons",
+    proj6_f2: "Système de comptes utilisateurs",
+    proj6_f3: "Interface d'administration Django",
+    proj6_f4: "Design responsive HTML/CSS",
     btn_github: "GitHub", btn_demo: "Démo",
     // Services
     serv_tag: "CE QUE JE PROPOSE", serv_title1: "Mes", serv_title2: "Services",
@@ -87,7 +93,7 @@ const translations = {
     // About
     about_tag: "WHO AM I", about_title1: "About", about_title2: "me",
     about_p1: "I'm Dieudo Tshibangu, a management IT student passionate about web development and application building.",
-    about_p2: "My goal is to work as a freelancer on Fiverr and Upwork, delivering professional-quality web solutions to clients worldwide.",
+    about_p2: "My goal is to work as a freelancer on Fiverr and Upwork, delivering professional-quality web solutions — showcase sites, e-commerce and Django applications — to clients worldwide.",
     about_age: "21 years old", about_loc: "Bujumbura, Burundi", about_edu: "Management IT",
     about_avail: "Available for freelance",
     about_btn1: "Download CV", about_btn2: "GitHub", about_btn3: "LinkedIn",
@@ -124,6 +130,12 @@ const translations = {
     proj5_f1: "Modern responsive design",
     proj5_f2: "Bilingual FR/EN",
     proj5_f3: "Animations and interactions",
+    proj6_type: "Showcase Site · Django/Python",
+    proj6_desc: "Showcase website for a juice bar with drinks menu, user accounts and admin interface.",
+    proj6_f1: "Juices and drinks menu",
+    proj6_f2: "User account system",
+    proj6_f3: "Django admin interface",
+    proj6_f4: "Responsive HTML/CSS design",
     btn_github: "GitHub", btn_demo: "Demo",
     // Services
     serv_tag: "WHAT I OFFER", serv_title1: "My", serv_title2: "Services",
