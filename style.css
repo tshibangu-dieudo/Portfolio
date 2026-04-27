@@ -554,3 +554,152 @@ footer a { color: var(--primary); text-decoration: none; }
   border-radius: 6px;
   z-index: 10;
 }
+
+/* ===== WHY ME SECTION ===== */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+.why-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.6rem;
+  text-align: center;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.why-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gradient);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+.why-card:hover::before { transform: scaleX(1); }
+.why-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+.why-icon {
+  width: 56px; height: 56px;
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 1rem;
+}
+.why-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+.why-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+
+/* ===== FLOATING CTA ===== */
+.floating-cta {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+}
+.floating-cta-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--gradient);
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.3rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  box-shadow: 0 8px 30px rgba(108,99,255,0.45);
+  transition: all 0.3s;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+}
+.floating-cta-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(108,99,255,0.6);
+}
+.floating-cta-btn i { font-size: 1rem; }
+.floating-cta-pulse {
+  position: absolute;
+  top: -4px; right: -4px;
+  width: 12px; height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+}
+.floating-cta-label {
+  background: rgba(15,15,26,0.9);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.3s;
+  pointer-events: none;
+}
+.floating-cta:hover .floating-cta-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== TESTIMONIALS PLACEHOLDER ===== */
+.testimonial-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.8rem;
+  text-align: center;
+  transition: all 0.3s;
+}
+.testimonial-card:hover { border-color: var(--primary); transform: translateY(-4px); }
+.testimonial-avatar {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: var(--gradient);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+  margin: 0 auto 1rem;
+  color: white;
+}
+.testimonial-card blockquote {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.testimonial-card cite {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-style: normal;
+}
+.stars { color: #fbbf24; font-size: 0.85rem; margin-bottom: 0.8rem; }
+.testimonial-cta-box {
+  background: linear-gradient(135deg, rgba(108,99,255,0.12), rgba(255,101,132,0.08));
+  border: 1px dashed rgba(108,99,255,0.35);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+.testimonial-cta-box h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+.testimonial-cta-box p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.2rem; }
+
+@media (max-width: 768px) {
+  .floating-cta { bottom: 1.2rem; right: 1.2rem; }
+  .floating-cta-btn span { display: none; }
+  .floating-cta-btn { padding: 0.85rem; border-radius: 50%; }
+}

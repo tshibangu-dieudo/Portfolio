@@ -85,7 +85,30 @@ const translations = {
     form_name: "Votre nom", form_email: "Votre email", form_subject: "Sujet",
     form_message: "Décrivez votre projet...", form_send: "Envoyer le message",
     footer_text: "© 2026 Dieudo Tshibangu · Développeur Freelance",
-    footer_made: "Fait avec ❤️ au Burundi"
+    footer_made: "Fait avec ❤️ au Burundi",
+    // Why Me
+    why_tag: "POURQUOI MOI", why_title1: "Ce que vous", why_title2: " obtenez",
+    why_desc: "Travailler avec moi, c'est choisir la fiabilité, la clarté et la livraison dans les délais.",
+    why1_title: "Code propre & documenté",
+    why1_desc: "Chaque ligne est lisible, structurée et commentée. Vous pouvez reprendre ou faire évoluer le projet facilement.",
+    why2_title: "Réponse sous 24h",
+    why2_desc: "Je réponds rapidement à chaque message. Vous êtes toujours informé de l'avancement de votre projet.",
+    why3_title: "Bilingue FR / EN",
+    why3_desc: "Je communique couramment en français et en anglais. Aucune barrière de langue avec vos clients ou partenaires.",
+    why4_title: "Livraison dans les délais",
+    why4_desc: "Je respecte les deadlines. Si un délai change, je vous préviens immédiatement avec une solution.",
+    why5_title: "Design responsive",
+    why5_desc: "Tous mes projets sont optimisés pour mobile, tablette et desktop. Votre site est parfait sur tous les écrans.",
+    why6_title: "Disponible maintenant",
+    why6_desc: "Je suis disponible immédiatement pour démarrer votre projet. Pas de liste d'attente, pas de délai inutile.",
+    // Testimonials
+    testi_tag: "ILS ME FONT CONFIANCE", testi_title1: "Avis", testi_title2: " clients",
+    testi_cta_title: "Vous êtes mon prochain client ?",
+    testi_cta_desc: "Je propose un tarif de lancement attractif pour les nouveaux clients. Discutons de votre projet sans engagement.",
+    testi_cta_btn: "Obtenir un devis gratuit",
+    // Floating CTA
+    fcta_label: "Disponible maintenant",
+    fcta_btn: "Discutons de votre projet"
   },
   en: {
     nav_home: "Home", nav_about: "About", nav_skills: "Skills",
@@ -167,7 +190,30 @@ const translations = {
     form_name: "Your name", form_email: "Your email", form_subject: "Subject",
     form_message: "Describe your project...", form_send: "Send message",
     footer_text: "© 2026 Dieudo Tshibangu · Freelance Developer",
-    footer_made: "Made with ❤️ in Burundi"
+    footer_made: "Made with ❤️ in Burundi",
+    // Why Me
+    why_tag: "WHY CHOOSE ME", why_title1: "What you", why_title2: " get",
+    why_desc: "Working with me means choosing reliability, clarity and on-time delivery.",
+    why1_title: "Clean & documented code",
+    why1_desc: "Every line is readable, structured and commented. You can easily maintain or scale the project.",
+    why2_title: "Reply within 24h",
+    why2_desc: "I respond quickly to every message. You're always informed about your project's progress.",
+    why3_title: "Bilingual FR / EN",
+    why3_desc: "I communicate fluently in French and English. No language barrier with your clients or partners.",
+    why4_title: "On-time delivery",
+    why4_desc: "I respect deadlines. If anything changes, I notify you immediately with a solution.",
+    why5_title: "Responsive design",
+    why5_desc: "All my projects are optimized for mobile, tablet and desktop. Your site looks perfect on every screen.",
+    why6_title: "Available now",
+    why6_desc: "I'm immediately available to start your project. No waiting list, no unnecessary delays.",
+    // Testimonials
+    testi_tag: "SOCIAL PROOF", testi_title1: "Client", testi_title2: " reviews",
+    testi_cta_title: "You could be my next client.",
+    testi_cta_desc: "I offer an attractive launch rate for new clients. Let's discuss your project with no commitment.",
+    testi_cta_btn: "Get a free quote",
+    // Floating CTA
+    fcta_label: "Available now",
+    fcta_btn: "Let's discuss your project"
   }
 };
 
